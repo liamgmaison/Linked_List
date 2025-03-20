@@ -95,6 +95,6 @@ public class HurricaneRowData implements Comparable<HurricaneRowData> {
         this.numOfTropicalStorms == other.numOfTropicalStorms &&
         this.numOfHurricanes == other.numOfHurricanes &&
         this.numOfMjrHurricanes == other.numOfMjrHurricanes;
-    }
+    } // End of equals() method
     
 } // End of class

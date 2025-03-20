@@ -24,7 +24,7 @@ public class Main {
         // The objects in question are defined by the year
 //      ArrayList<HurricaneRowData> hurricaneData = new ArrayList<>();
         // We are now using a linked list.
-        DoublyLinkedSortedList data = new DoublyLinkedSortedList();
+        DoublyLinkedSortedList hurricaneData = new DoublyLinkedSortedList();
         
         // We use a try catch for exception handling
         try {
@@ -49,6 +49,8 @@ public class Main {
                 // We now will take the data stored in values and trim out each
                 // data value and turn it into an integer. These values are
                 // stored into the arraylist using hurricaneData.add.
+                
+                // TODO: WE NEED TO ADD .ADD() for this!
                 hurricaneData.add(new HurricaneRowData(
                     // Year
                     Integer.parseInt(values[0].trim()),
