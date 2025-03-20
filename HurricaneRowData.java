@@ -64,10 +64,37 @@ public class HurricaneRowData implements Comparable<HurricaneRowData> {
         ", Major Hurricanes (Cat. 3-5): " + numOfMjrHurricanes;
     } // End of toString override
     
+    // Override compareTo() from the implementation of Comparable. We need it
+    // to be able to compare an input data point with another. This will be
+    // important in sorting later.
     @Override
     public int compareTo(HurricaneRowData other)
     {
         return Integer.compare(other.aceIndex, this.aceIndex);
     } // End of compareTo
+    
+    // Override of equals() method to ensure identity of a HRD object.
+    @Override
+    public boolean equals(Object obj)
+    {
+        // This checks if this object and obj are equal
+        if (this == obj) {
+            return true;
+        }
+        // This checks if the obj is null OR if the class of the object is 
+        // not the same as a HurricaneRowObject
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        // This casts HurricaneRowData as a legit HRD object
+        HurricaneRowData other = (HurricaneRowData) obj;
+        
+        // This returns true if all these fields match else it returns false
+        return this.year == other.year &&
+        this.aceIndex == other.aceIndex &&
+        this.numOfTropicalStorms == other.numOfTropicalStorms &&
+        this.numOfHurricanes == other.numOfHurricanes &&
+        this.numOfMjrHurricanes == other.numOfMjrHurricanes;
+    }
     
 } // End of class
