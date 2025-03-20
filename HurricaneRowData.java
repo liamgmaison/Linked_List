@@ -64,4 +64,10 @@ public class HurricaneRowData implements Comparable<HurricaneRowData> {
         ", Major Hurricanes (Cat. 3-5): " + numOfMjrHurricanes;
     } // End of toString override
     
+    @Override
+    public int compareTo(HurricaneRowData other)
+    {
+        return Integer.compare(other.aceIndex, this.aceIndex);
+    } // End of compareTo
+    
 } // End of class
