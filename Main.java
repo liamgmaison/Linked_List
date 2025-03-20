@@ -1,14 +1,10 @@
 /*
 Title: Main.java
 Name: William Maison-Bush
-Date: 07 February 2025
-Purpose: Reads hurricane data from a CSV file, finds the year with the 
-highest ACE Index, and writes the result to a text file.
+Date: 20 March 2025
+Purpose: 
 Sources: 
 Java - How to Program - Late Objects 11th Edition (Deitel et al)
-https://www.w3schools.com/java/java_arraylist.asp
-2251 Example Files: 070_fileio_unemployment
-ChatGPT: How can I improve this program? Clean up?
 */
 
 import java.util.Scanner;
@@ -26,7 +22,9 @@ public class Main {
         
         // Create an ArrayList to store hurricane data objects
         // The objects in question are defined by the year
-        ArrayList<HurricaneRowData> hurricaneData = new ArrayList<>();
+//      ArrayList<HurricaneRowData> hurricaneData = new ArrayList<>();
+        // We are now using a linked list.
+        DoublyLinkedSortedList data = new DoublyLinkedSortedList();
         
         // We use a try catch for exception handling
         try {

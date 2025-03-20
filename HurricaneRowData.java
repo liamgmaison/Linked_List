@@ -1,21 +1,18 @@
 /*
 Title: HurricaneRowData.java
 Name: William Maison-Bush
-Date: 07 February 2025
-Purpose: The purpose of this code is to define a data model (HurricaneRowData) 
-that stores hurricane statistics for a given year, including the ACE 
-Index, number of tropical storms, hurricanes, and major hurricanes, 
-with methods to access and display this information in a structured 
-format.
-Sources: Java - How to Program - Late Objects 11th Edition Deitel et al
-https://www.w3schools.com/java/java_class_methods.asp
-2251 Example Files
-ChatGPT: "Explain how to use classes using character building with a
-Fallout 3-like system."
-}"
+Date: 20 March 2025
+Purpose: 
+Sources: 
+Java - How to Program - Late Objects 11th Edition (Deitel et al)
 */
 
-public class HurricaneRowData {
+/*
+We need to make sure that HurricaneRowData objects can compare to other HRD
+objects. So we will implement the sorting method.
+*/
+
+public class HurricaneRowData implements Comparable<HurricaneRowData> {
     
     // Private instance variables
     private int year;
