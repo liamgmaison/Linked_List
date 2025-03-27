@@ -58,11 +58,13 @@ public class HurricaneRowData implements Comparable<HurricaneRowData> {
     // from 110_painting_example_overload_vs_override from 2251
     @Override
     public String toString() {
-        return "Year: " + year + ", ACE Index: " + aceIndex + 
-        ", Tropical Storms: " + numOfTropicalStorms + 
-        ", Hurricanes (Cat. 1-5): " + numOfHurricanes + 
-        ", Major Hurricanes (Cat. 3-5): " + numOfMjrHurricanes;
-    } // End of toString override
+        return String.format("%10d %10d %10d %10d %10d", year, aceIndex, numOfTropicalStorms, numOfHurricanes, numOfMjrHurricanes);
+    }
+    
+    public static void printHeader() {
+        System.out.printf("%10s %10s %10s %10s %10s%n",
+            "Year", "ACE Index", "Tropical Storms", "Total Hurricanes", "Major Hurricanes");
+    }
     
     // Override compareTo() from the implementation of Comparable. We need it
     // to be able to compare an input data point with another. This will be
